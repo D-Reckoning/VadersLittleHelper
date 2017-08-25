@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VadersLittleHelper.ObjectTypes
 {
-    interface IPilot : ICard
+    public interface IPilot : ICard
     {
         int PilotSkill { get; }
         int FirePower { get; }
