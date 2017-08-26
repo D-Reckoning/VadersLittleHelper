@@ -8,5 +8,6 @@ namespace VadersLittleHelper.dbClasses
 {
     public interface IDataReader
     {
+        IEnumerable<object[]> GetTableContent(string tableName);
     }
 }

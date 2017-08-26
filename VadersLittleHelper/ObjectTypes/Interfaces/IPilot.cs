@@ -14,7 +14,7 @@ namespace VadersLittleHelper.ObjectTypes
         int Hull { get; }
         int Shields { get; }
 
-        Ship Ship { get; }
+        string Ship { get; }
         Faction Faction { get; }
     }
 }
