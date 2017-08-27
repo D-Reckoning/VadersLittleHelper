@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace VadersLittleHelper.ObjectTypes
 {
-    public interface ICard : IGameComponent
+    public interface IGameComponent
     {
-        string Text { get; }
-        int Pts { get; }
-        bool Unique { get; }
+        string Id { get; }
+        string Name { get; }
+        int QuantityOwned { get; }
     }
 }

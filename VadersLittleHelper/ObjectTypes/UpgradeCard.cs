@@ -3,17 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VadersLittleHelper.dbClasses;
 
 namespace VadersLittleHelper.ObjectTypes
 {
     public class UpgradeCard : IUpgrade
     {
+        public string Id { get; }
         public string Name { get; }
         public string Text { get; }
         public int Pts { get; }
         public bool Unique { get; }
-
-        public UpgradeType Type { get; }
         public bool Limited { get; }
+        public UpgradeType Type { get; }
+
+        public int QuantityOwned { get; }
+
+        public UpgradeCard(object[] cardData)
+        {
+            try
+            {
+                Id =            (string)cardData[0];
+                Name =          (string)cardData[1];
+                Text =          (string)cardData[2];
+                Pts =           (int)((double)cardData[3]);
+                Unique =        DataHelper.StringToBool((string)cardData[4]);
+                Limited =       DataHelper.StringToBool((string)cardData[5]);
+                Type =          DataHelper.StringToUpgradeType((string)cardData[6]);
+
+                QuantityOwned = (int)((double)cardData[7]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Unable to parse cardData: {e.GetType().ToString()}");
+                throw;
+            }
+        }
     }
 }

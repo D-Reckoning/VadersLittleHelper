@@ -9,7 +9,7 @@ namespace VadersLittleHelper
 {
     static class Program
     {
-        static CardHandler db;
+        static GameComponentHandler db;
 
         /// <summary>
         /// The main entry point for the application.
@@ -17,7 +17,7 @@ namespace VadersLittleHelper
         [STAThread]
         static void Main()
         {
-            db = new CardHandler();
+            db = new GameComponentHandler();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

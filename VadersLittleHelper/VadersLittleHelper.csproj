@@ -51,10 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbClasses\CardHandler.cs" />
+    <Compile Include="dbClasses\GameComponentHandler.cs" />
     <Compile Include="dbClasses\DataHelper.cs" />
     <Compile Include="dbClasses\ExcelReader.cs" />
     <Compile Include="dbClasses\Interfaces\IDataReader.cs" />
+    <Compile Include="ObjectTypes\Interfaces\IGameComponent.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>

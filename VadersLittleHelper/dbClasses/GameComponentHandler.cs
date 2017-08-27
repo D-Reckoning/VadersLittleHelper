@@ -7,23 +7,23 @@ using VadersLittleHelper.ObjectTypes;
 
 namespace VadersLittleHelper.dbClasses
 {
-    class CardHandler
+    class GameComponentHandler
     {
         private const string dataSource = @"..\..\db\ComponentDB.xlsx";
 
         public IList<IPilot> Pilots { get; }
         public IList<IUpgrade> Upgrades { get; }
-        public IList<Ship> Ships { get; }
+        public IList<IGameComponent> Ships { get; }
 
         private readonly IDataReader _dataReader;
 
-        public CardHandler()
+        public GameComponentHandler()
         {
             _dataReader = new ExcelReader(dataSource);
         
             Pilots = LoadPilots();
-            //Upgrades = LoadUpgradeCards();
-            //Ships = LoadShips();
+            Upgrades = LoadUpgradeCards();
+            Ships = LoadShips();
         }
 
         private IList<IPilot> LoadPilots()
@@ -38,18 +38,27 @@ namespace VadersLittleHelper.dbClasses
             return pilotList;
         }
 
-        //private IList<IUpgrade> LoadUpgradeCards()
-        //{
-        //    return new Dictionary<IUpgrade, int>();
-        //}
+        private IList<IUpgrade> LoadUpgradeCards()
+        {
+            IList<IUpgrade> upgradeList = new List<IUpgrade>();
 
-        //private IList<Ship> LoadShips()
-        //{
-        //    return new Dictionary<Ship, int>();
-        //}
-        //private IList<ISquadron> LoadSquadrons()
-        //{
-        //    return new List<ISquadron>();
-        //}
+            foreach (object[] upgradeData in _dataReader.GetTableContent("CardDB"))
+            {
+                upgradeList.Add(new UpgradeCard(upgradeData));
+            }
+            return upgradeList;
+        }
+
+        private IList<IGameComponent> LoadShips()
+        {
+            IList<IGameComponent> shipList = new List<IGameComponent>();
+
+            foreach (object[] shipData in _dataReader.GetTableContent("ShipDB"))
+            {
+                shipList.Add(new Ship(shipData));
+            }
+            return shipList;
+        }
+
     } 
 }

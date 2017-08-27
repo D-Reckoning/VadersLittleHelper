@@ -10,7 +10,7 @@ namespace VadersLittleHelper.ObjectTypes
     {
         Title,
         Modification,
-        Elite,
+        Elite_Pilot_Skill,
         Astromech,
         Torpedoes,
         Missiles,
@@ -18,7 +18,7 @@ namespace VadersLittleHelper.ObjectTypes
         Turret,
         Bomb,
         Crew,
-        SalvagedAstromech,
+        Salvaged_Astromech,
         System,
         Illicit,
         Cargo,
