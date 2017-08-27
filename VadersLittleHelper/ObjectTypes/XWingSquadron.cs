@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace VadersLittleHelper.ObjectTypes
 {
-    interface ISquadron
+    class XWingSquadron : ISquadron
     {
-        string Id { get; }
-        string Name { get; }
-        Dictionary<IPilot, IList<IUpgrade>> Pilots { get; }
+        public string Id { get; }
+        public string Name { get; }
+        public Dictionary<IPilot, IList<IUpgrade>> Pilots { get; }
     }
 }

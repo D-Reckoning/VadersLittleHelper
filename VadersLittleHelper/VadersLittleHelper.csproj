@@ -55,7 +55,9 @@
     <Compile Include="dbClasses\DataHelper.cs" />
     <Compile Include="dbClasses\ExcelReader.cs" />
     <Compile Include="dbClasses\Interfaces\IDataReader.cs" />
+    <Compile Include="dbClasses\SquadronHandler.cs" />
     <Compile Include="ObjectTypes\Interfaces\IGameComponent.cs" />
+    <Compile Include="ObjectTypes\XWingSquadron.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,5 +42,21 @@ namespace VadersLittleHelper.dbClasses
                 yield return item.ItemArray;
             }
         }
+
+        public IEnumerable<object[]> GetTableContent(DataTable table)
+        {
+            foreach (DataRow item in table.Rows)
+            {
+                yield return item.ItemArray;
+            }
+        }
+
+        public IEnumerable<DataTable> GetTables()
+        {
+            foreach (DataTable table in _fileContents.Tables)
+            {
+                yield return table;
+            }
+        }
     }
 }
