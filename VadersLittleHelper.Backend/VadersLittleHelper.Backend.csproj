@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VadersLittleHelper.Backend</RootNamespace>
+    <AssemblyName>VadersLittleHelper.Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.1.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.1.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbClasses\BinaryReader.cs" />
+    <Compile Include="dbClasses\DataHelper.cs" />
+    <Compile Include="dbClasses\ExcelReader.cs" />
+    <Compile Include="dbClasses\GameComponentHandler.cs" />
+    <Compile Include="dbClasses\Interfaces\IDataReader.cs" />
+    <Compile Include="dbClasses\SquadronHandler.cs" />
+    <Compile Include="ObjectTypes\Enums\Faction.cs" />
+    <Compile Include="ObjectTypes\Enums\UpgradeType.cs" />
+    <Compile Include="ObjectTypes\Interfaces\ICard.cs" />
+    <Compile Include="ObjectTypes\Interfaces\IGameComponent.cs" />
+    <Compile Include="ObjectTypes\Interfaces\IPilot.cs" />
+    <Compile Include="ObjectTypes\Interfaces\ISquadron.cs" />
+    <Compile Include="ObjectTypes\Interfaces\ISquadronMember.cs" />
+    <Compile Include="ObjectTypes\Interfaces\IUpgrade.cs" />
+    <Compile Include="ObjectTypes\PilotCard.cs" />
+    <Compile Include="ObjectTypes\Ship.cs" />
+    <Compile Include="ObjectTypes\Squadron.cs" />
+    <Compile Include="ObjectTypes\SquadronMember.cs" />
+    <Compile Include="ObjectTypes\UpgradeCard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="db\ComponentDB.xlsx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

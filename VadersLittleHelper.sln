@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VadersLittleHelper", "VadersLittleHelper\VadersLittleHelper.csproj", "{221C0408-D33F-41A5-9EA7-10FBAF893C27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VadersLittleHelper.Backend", "VadersLittleHelper.Backend\VadersLittleHelper.Backend.csproj", "{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{221C0408-D33F-41A5-9EA7-10FBAF893C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{221C0408-D33F-41A5-9EA7-10FBAF893C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{221C0408-D33F-41A5-9EA7-10FBAF893C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{221C0408-D33F-41A5-9EA7-10FBAF893C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
