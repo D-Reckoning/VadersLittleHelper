@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VadersLittleHelper.Backend", "VadersLittleHelper.Backend\VadersLittleHelper.Backend.csproj", "{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VadersLittleHelper.Test", "VadersLittleHelper.Test\VadersLittleHelper.Test.csproj", "{3A3DDD19-641D-4AD6-819B-EB0431C9CE66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8FCC6CD-B03E-4B12-B2E8-5BECA6DA1118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3DDD19-641D-4AD6-819B-EB0431C9CE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3DDD19-641D-4AD6-819B-EB0431C9CE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3DDD19-641D-4AD6-819B-EB0431C9CE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3DDD19-641D-4AD6-819B-EB0431C9CE66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

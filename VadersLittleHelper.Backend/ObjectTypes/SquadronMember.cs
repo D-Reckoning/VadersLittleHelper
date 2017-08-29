@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace VadersLittleHelper.BackEnd.ObjectTypes
 {
-    class SquadronMember : ISquadronMember
+    [Serializable]
+    public class SquadronMember : ISquadronMember
     {
         public string PilotId { get; }
         private readonly List<string> _upgradeIds;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace VadersLittleHelper.BackEnd.ObjectTypes
 {
     [Serializable]
-    class Squadron : ISquadron
+    public class Squadron : ISquadron
     {
         public string Id { get; }
         public string Name { get; }
