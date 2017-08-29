@@ -28,7 +28,7 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
             _upgradeIds.Remove(upgrade.Id);
         }
 
-        public List<string> UpgradeIds()
+        public List<string> GetUpgrades()
         {
             return _upgradeIds;
         }

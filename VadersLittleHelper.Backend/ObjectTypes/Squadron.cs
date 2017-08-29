@@ -11,12 +11,30 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
     {
         public string Id { get; }
         public string Name { get; }
-        public List<ISquadronMember> Pilots { get; }
+        public Faction Faction { get; }
 
-        public Squadron(string name)
+        private readonly List<ISquadronMember> _pilotIds;
+
+        public Squadron(string name, Faction faction)
         {
             Name = name;
-            Pilots = new List<ISquadronMember>();
+            faction = Faction;
+            _pilotIds = new List<ISquadronMember>();
+        }
+
+        public List<ISquadronMember> GetPilots()
+        {
+            return _pilotIds;
+        }
+
+        public void AddPilot(ISquadronMember pilot)
+        {
+            _pilotIds.Add(pilot);
+        }
+
+        public void RemovePilot(ISquadronMember pilot)
+        {
+            _pilotIds.Remove(pilot);
         }
     }
 }

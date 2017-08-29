@@ -9,7 +9,7 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
     public interface ISquadronMember
     {
         string PilotId { get; }
-        List<string> UpgradeIds();
+        List<string> GetUpgrades();
         void AddUpgrade(IUpgrade upgrade);
         void RemoveUpgrade(IUpgrade upgrade);
     }

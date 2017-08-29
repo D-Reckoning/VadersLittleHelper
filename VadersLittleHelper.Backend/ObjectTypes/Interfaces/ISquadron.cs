@@ -10,6 +10,9 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
     {
         string Id { get; }
         string Name { get; }
-        List<ISquadronMember> Pilots { get; }
+        Faction Faction { get; }
+        List<ISquadronMember> GetPilots();
+        void AddPilot(ISquadronMember pilot);
+        void RemovePilot(ISquadronMember pilot);
     }
 }

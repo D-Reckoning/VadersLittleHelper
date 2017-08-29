@@ -19,6 +19,11 @@ namespace VadersLittleHelper.Backend.dbClasses
             Squadrons = LoadSquadrons();
         }
 
+        public void SaveSquadrons()
+        {
+            BinaryReader.WriteToFile(dataSource, Squadrons);
+        }
+
         private IList<ISquadron> LoadSquadrons()
         {
             return (IList<ISquadron>)BinaryReader.ReadFromFile(dataSource);
