@@ -51,12 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbClasses\BinaryReader.cs" />
     <Compile Include="dbClasses\GameComponentHandler.cs" />
     <Compile Include="dbClasses\DataHelper.cs" />
     <Compile Include="dbClasses\ExcelReader.cs" />
     <Compile Include="dbClasses\Interfaces\IDataReader.cs" />
     <Compile Include="dbClasses\SquadronHandler.cs" />
     <Compile Include="ObjectTypes\Interfaces\IGameComponent.cs" />
+    <Compile Include="ObjectTypes\Interfaces\ISquadronMember.cs" />
+    <Compile Include="ObjectTypes\Squadron.cs" />
+    <Compile Include="ObjectTypes\SquadronMember.cs" />
     <Compile Include="ObjectTypes\XWingSquadron.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
