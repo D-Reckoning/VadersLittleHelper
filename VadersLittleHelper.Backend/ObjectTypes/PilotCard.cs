@@ -52,5 +52,10 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
                 throw;
             }
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

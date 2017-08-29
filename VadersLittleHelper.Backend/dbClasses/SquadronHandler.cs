@@ -8,9 +8,9 @@ using VadersLittleHelper.BackEnd.ObjectTypes;
 
 namespace VadersLittleHelper.Backend.dbClasses
 {
-    class SquadronHandler
+    public class SquadronHandler
     {
-        private const string dataSource = @"..\..\db\SquadronDB.bin";
+        private const string dataSource = @"..\..\..\VadersLittleHelper.Backend\db\SquadronDB.bin";
 
         public IList<ISquadron> Squadrons { get; }
 

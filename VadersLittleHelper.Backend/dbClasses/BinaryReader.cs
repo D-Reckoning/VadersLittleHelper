@@ -22,19 +22,23 @@ namespace VadersLittleHelper.Backend.dbClasses
 
         public static dynamic ReadFromFile(string relativePath)
         {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(GetFullPath(relativePath), FileMode.Open, FileAccess.Read, FileShare.Read);
-            dynamic data = formatter.Deserialize(stream);
-            stream.Close();
+            string fullPath = GetFullPath(relativePath);
+            if (File.Exists(fullPath))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream(fullPath, FileMode.Open, FileAccess.Read, FileShare.Read);
+                dynamic data = formatter.Deserialize(stream);
+                stream.Close();
 
-            return data;
+                return data;
+            }
+            else return null;
         }
 
         private static string GetFullPath(string relativePath)
         {
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string filename = Path.GetFullPath(Path.Combine(basePath, relativePath));
-
             return filename;
         }
     }

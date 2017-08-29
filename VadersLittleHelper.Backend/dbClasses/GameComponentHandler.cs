@@ -7,9 +7,9 @@ using VadersLittleHelper.BackEnd.ObjectTypes;
 
 namespace VadersLittleHelper.Backend.dbClasses
 {
-    class GameComponentHandler
+    public class GameComponentHandler
     {
-        private const string dataSource = @"..\..\db\ComponentDB.xlsx";
+        private const string dataSource = @"..\..\..\VadersLittleHelper.Backend\db\ComponentDB.xlsx";
 
         public IList<IPilot> Pilots { get; }
         public IList<IUpgrade> Upgrades { get; }
