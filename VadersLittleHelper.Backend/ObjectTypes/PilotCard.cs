@@ -55,7 +55,7 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
 
         public override string ToString()
         {
-            return Name;
+            return $"{Ship}: {Name}";
         }
     }
 }
