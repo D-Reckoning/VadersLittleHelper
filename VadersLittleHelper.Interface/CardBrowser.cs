@@ -41,7 +41,7 @@ namespace VadersLittleHelper.Interface
                 lblShields.Visible = true;
                 lblUpgradeType.Visible = false;
 
-                lblCardName.Text = pilot.Unique ? $"•{pilot.Name}" : pilot.Name;
+                lblCardName.Text = pilot.Name;
                 txtCardText.Text = pilot.Text;
                 lblCardPoints.Text = $"{pilot.Pts} pts";
 
@@ -61,7 +61,7 @@ namespace VadersLittleHelper.Interface
                 lblShields.Visible = false;
                 lblUpgradeType.Visible = true;
 
-                lblCardName.Text = upgrade.Unique? $"•{upgrade.Name}" : upgrade.Name;
+                lblCardName.Text = upgrade.Name;
                 txtCardText.Text = upgrade.Text;
                 lblCardPoints.Text = $"{upgrade.Pts} pts";
 

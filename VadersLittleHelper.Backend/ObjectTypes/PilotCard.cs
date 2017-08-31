@@ -31,12 +31,13 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
             try
             {
                 Id =            (string)cardData[0];
-                Name =          (string)cardData[1];
                 Text =          (string)cardData[2];
                 Pts =           (int)((double)cardData[3]);
                 Unique =        DataHelper.StringToBool((string)cardData[4]);
                 Ship =          (string)cardData[5];
                 Faction =       DataHelper.StringToFaction((string)cardData[6]);
+
+                Name =          Unique ? $"•{cardData[1]}" : (string)cardData[1];
 
                 PilotSkill =    (int)((double)cardData[7]);
                 FirePower =     (int)((double)cardData[8]);

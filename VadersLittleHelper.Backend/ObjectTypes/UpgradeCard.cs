@@ -24,12 +24,13 @@ namespace VadersLittleHelper.BackEnd.ObjectTypes
             try
             {
                 Id =            (string)cardData[0];
-                Name =          (string)cardData[1];
                 Text =          (string)cardData[2];
                 Pts =           (int)((double)cardData[3]);
                 Unique =        DataHelper.StringToBool((string)cardData[4]);
                 Limited =       DataHelper.StringToBool((string)cardData[5]);
                 Type =          DataHelper.StringToUpgradeType((string)cardData[6]);
+
+                Name = Unique ? $"•{cardData[1]}" : (string)cardData[1];
 
                 QuantityOwned = (int)((double)cardData[7]);
             }
